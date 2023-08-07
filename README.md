@@ -76,5 +76,5 @@ To set up the Homelab Environment Monitor project, follow these precise steps:
 *Caption: Web User Interface*
 
 ![Setup](setup.jpg)
-*Caption: Sensor Setup on the Server*
+*Caption: Sensor Setup on the Server (Dell PowerEdge R610)*
 
