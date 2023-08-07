@@ -25,7 +25,7 @@ Homelab Environment Monitor is an Arduino-based project designed to provide seam
 
 To set up the Homelab Environment Monitor project, follow these precise steps:
 
-1. **Install Arduino IDE**: Download and install the [Arduino IDE](https://www.arduino.cc/en/software) on your computer.
+1. **Install Arduino IDE**: Download and install the [Arduino IDE](https://www.arduino.cc/en/software) on your computer only 1.x will work (2023/08/07).
 
 2. **Install Libraries**:
    - Open the Arduino IDE.
@@ -47,7 +47,6 @@ To set up the Homelab Environment Monitor project, follow these precise steps:
    - Select your ESP8266 board from `Tools` > `Board`.
 
 4. **Install SPIFFS Plugin**:
-   - Only for Arduino IDE 1.x users: Install the SPIFFS plugin for uploading files to the ESP8266's SPI Flash File System.
    - Visit the [Arduino ESP8266 filesystem uploader plugin repository](https://github.com/esp8266/arduino-esp8266fs-plugin) for detailed installation instructions.
 
 5. **Upload Code**:
