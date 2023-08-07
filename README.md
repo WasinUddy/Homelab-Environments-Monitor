@@ -72,9 +72,9 @@ To set up the Homelab Environment Monitor project, follow these precise steps:
 
 ## Images
 
-![Screenshot](path/to/screenshot.png)
+![Screenshot](screenshot.png)
 *Caption: Web User Interface*
 
-![Setup](path/to/setup.jpg)
+![Setup](setup.jpg)
 *Caption: Sensor Setup on the Server*
 
