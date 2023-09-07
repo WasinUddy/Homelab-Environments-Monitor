@@ -6,9 +6,9 @@
 
 ## Overview
 
-Homelab Environment Monitor is an Arduino-based project designed to provide seamless monitoring of your homelab server room environment. Using a Generic ESP8266 board and an Adafruit BME280 sensor, this solution offers an efficient way to keep track of temperature, humidity, and atmospheric pressure without the need for a real-time database like Firebase. The project leverages the ESP8266's web server capabilities to facilitate easy access to environmental data.
+Homelab Environment Monitor is an Arduino-based project designed to provide seamless monitoring of your homelab server room environment. Using a Generic ESP8266 board and an Adafruit BME280 sensor, this solution offers an efficient way to keep track of temperature, humidity, and atmospheric pressure without the need for a real-time database like Firebase. The project leverages the ESP8266's web server capabilities to facilitate easy access to environmental data and demonstrates the principle of SSR (Server-Side Rendering).
 
-**Note:** This project demonstrates the principle of SSR (Server-Side Rendering).
+
 
 ## Features
 
