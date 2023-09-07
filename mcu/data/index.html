@@ -64,7 +64,7 @@
       fetch('/api') // Assuming the ESP8266 server is running on the same domain.
         .then(response => response.json())
         .then(data => {
-          document.getElementById('temperature').textContent = data.temperature + 'C';
+          document.getElementById('temperature').textContent = data.temperature + ' °C';
           document.getElementById('humidity').textContent = data.humidity + '%';
           document.getElementById('pressure').textContent = data.pressure + ' hPa';
         })
