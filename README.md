@@ -1,6 +1,5 @@
 # Homelab Environments Monitor
 
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### Visit me at [git.prometheuzdy.cloud](https://git.prometheuzdy.cloud/WasinUddy/Homelab-Environments-Monitor)
@@ -8,6 +7,8 @@
 ## Overview
 
 Homelab Environment Monitor is an Arduino-based project designed to provide seamless monitoring of your homelab server room environment. Using a Generic ESP8266 board and an Adafruit BME280 sensor, this solution offers an efficient way to keep track of temperature, humidity, and atmospheric pressure without the need for a real-time database like Firebase. The project leverages the ESP8266's web server capabilities to facilitate easy access to environmental data.
+
+**Note:** This project demonstrates the principle of SSR (Server-Side Rendering).
 
 ## Features
 
@@ -20,7 +21,6 @@ Homelab Environment Monitor is an Arduino-based project designed to provide seam
 - `mcu/mcu.ino`: Arduino sketch containing the code for the environment monitoring system.
 - `mcu/data/index.html`: HTML file serving as the user interface for visualizing sensor data.
 - `LICENSE`: MIT License file governing the usage of this project.
-
 
 ## Installation
 
@@ -64,7 +64,6 @@ To set up the Homelab Environment Monitor project, follow these precise steps:
    - After uploading, access the user-friendly web interface by opening `http://{esp8266_ip}` in your web browser.
    - For programmatic access, retrieve sensor data via the API at `http://{esp8266_ip}/api`.
 
-
 ## Usage
 
 - **Web Interface**: Access the intuitive web interface by navigating to `http://{esp8266_ip}` in your web browser. This interface presents an easy-to-read visualization of the server room environment.
@@ -77,4 +76,3 @@ To set up the Homelab Environment Monitor project, follow these precise steps:
 
 ![Setup](setup.jpg)
 *Caption: Sensor Setup on the Server (Dell PowerEdge R610)*
-
