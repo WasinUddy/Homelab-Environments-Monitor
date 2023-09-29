@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Homelab Environments</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .weather-info {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .weather-card {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 150px;
+      margin: 3rem;
+    }
+
+    .weather-icon {
+      font-size: 48px;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Homelab Environments</h1>
+  <div class="weather-info">
+    <div class="weather-card">
+      <i class="material-icons weather-icon">thermostat</i>
+      <h2>Temperature</h2>
+      <p id="temperature">{TEMPERATURE} °C</p>
+    </div>
+    <div class="weather-card">
+      <i class="material-icons weather-icon">opacity</i>
+      <h2>Humidity</h2>
+      <p id="humidity">{HUMIDITY}%</p>
+    </div>
+    <div class="weather-card">
+      <i class="material-icons weather-icon">compress</i>
+      <h2>Pressure</h2>
+      <p id="pressure">{PRESSURE} hPa</p>
+    </div>
+  </div>
+
+  <script>
+    function fetchData() {
+      // Fetch data from ESP8266 API
+      fetch('/api') // Assuming the ESP8266 server is running on the same domain.
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('temperature').textContent = data.temperature + ' °C';
+          document.getElementById('humidity').textContent = data.humidity + '%';
+          document.getElementById('pressure').textContent = data.pressure + ' hPa';
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    }
+
+    // Fetch data every 1 second
+    setInterval(fetchData, 1000);
+  </script>
+</body>
+</html>
