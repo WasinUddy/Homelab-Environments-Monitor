@@ -13,6 +13,7 @@ Homelab Environment Monitor is an Arduino-based project designed to provide seam
 - Web-based user interface for convenient access to real-time sensor readings.
 - Utilizes Adafruit BME280 sensor for accurate and reliable environmental measurements.
 - Minimalistic setup without the requirement of a real-time database.
+- Export Sensor data as Prometheus metrics for long-term monitoring and analysis and visualization with Grafana.
 
 ## Repository Contents
 
@@ -69,16 +70,21 @@ To set up the Homelab Environment Monitor project, follow these precise steps:
 7. **Access the Monitor**:
    - After uploading, access the user-friendly web interface by opening `http://{esp_ip}` in your web browser.
    - For programmatic access, retrieve sensor data via the API at `http://{esp_ip}/api`.
+   - For prometheus and grafana access, retrieve sensor data via the API at `http://{esp_ip}/metrics`.
 
 ## Usage
 
 - **Web Interface**: Access the intuitive web interface by navigating to `http://{esp_ip}` in your web browser. This interface presents an easy-to-read visualization of the server room environment.
 - **API Access**: Obtain sensor data programmatically by making a GET request to `http://{esp_ip}/api`.
+- **Prometheus & Grafana**: Use the [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) monitoring stack to visualize and analyze sensor data. This is the recommended approach for long-term monitoring of the server room environment.
 
 ## Images
 
 ![Screenshot](screenshot.png)
 *Caption: Web User Interface*
+
+![Screenshot](grafana-screenshot.png)
+*Caption: Grafana Dashboard*
 
 ![Setup](setup.jpg)
 *Caption: Sensor Setup on the Server (Dell PowerEdge R610)*
