@@ -14,8 +14,8 @@
 Adafruit_BME280 bme;
 
 // Replace with your network credentials
-const char* ssid = "SM24A";
-const char* password = "SCSMWSST";
+const char* ssid = "{YOUR SSID HERE}";
+const char* password = "{YOUR PASSWORD HERE}";
 
 // Create an instance of the ESP8266WebServer class on port 80
 ESP8266WebServer server(80);
@@ -41,6 +41,7 @@ void setup() {
 
   server.on("/", handleRoot);
   server.on("/api", handleDataRequest);
+  server.on("/metrics", handleMetrics);
   server.begin();
 
   unsigned status;
@@ -101,4 +102,31 @@ void handleDataRequest() {
   jsonPayload += bme.readHumidity();
   jsonPayload += "}";
   server.send(200, "application/json", jsonPayload);
+}
+
+
+void handleMetrics() {
+  // Handle metrics request (Prometheus)
+  String metrics = "";
+  float t = bme.readTemperature();
+  float h = bme.readHumidity();
+  float p = bme.readPressure() / 100.0F;
+
+  // Counter Anomaly
+  if (t > 100) {
+    ESP.restart();
+  }
+
+  // Construct metrics payload
+  metrics += "# HELP temperature Temperature in Celsius\n";
+  metrics += "# TYPE temperature gauge\n";
+  metrics += "temperature " + String(t) + "\n";
+  metrics += "# HELP humidity Humidity in %\n";
+  metrics += "# TYPE humidity gauge\n";
+  metrics += "humidity " + String(h) + "\n";
+  metrics += "# HELP pressure Pressure in hPa\n";
+  metrics += "# TYPE pressure gauge\n";
+  metrics += "pressure " + String(p) + "\n";
+
+  server.send(200, "text/plain", metrics);
 }
