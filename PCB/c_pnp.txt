@@ -1,0 +1,27 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=c
+*Date=19:13:23
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;;34.6884;-4.24892;0;Bottom;Via1
+2;;;45.7027;-23.2402;0;Bottom;Hole3
+3;;;45.7027;-1.74016;0;Bottom;Hole2
+4;;;11.5527;-14.0655;0;Bottom;TXT2
+5;;;10.3992;-12.5;0;Bottom;TXT2
+6;;;10.6183;-12.6221;-90;Bottom;Seeeduino XIAO
+7;;;2.20265;-1.74016;0;Bottom;Hole1
+8;;;2.20265;-23.2402;0;Bottom;Hole4
+9;;;40.9046;-23.9179;0;Bottom;TXT3
+10;;;18.057;-1.57437;0;Bottom;TXT1
+11;;;11.6617;-15.6991;0;Bottom;TXT2
+12;;;34.2426;-12.5902;0;Bottom;BME280
